@@ -1,0 +1,37 @@
+<!DOCTYPE html> <!-- html5 표현태그 -->
+<html> <!-- html start -->
+<head> <!--  head s -->
+<meta charset="EUC-KR"> <!--  한글인코딩 : 1.EUC-KR 2.UTF-8 -->
+<title>Insert title here</title> <!-- 페이지 제목 -->
+</head> <!--  head e -->
+<body> <!--  body s -->
+
+   <!-- 
+      img :이미지 태그
+          1. alt : 이미지 이름 [텍스트]
+          2. src : 이미지 경로
+               - 상대경로 : 해당파일의 모든 경로 표시 
+               - 절대경로 : 현재파일 기준으로 해당파일의 경로표시
+          /         : 경로 구분 [ 현재 파일 기준]
+          . . /     : 상위로 이동
+          ../../    : 2번 상위로 이동
+          
+          3. width : 사진의 가로 길이     
+                  px : 픽셀
+                  %  : 백분율
+      
+      
+      -->
+      <!--  1. 현재 html 과 사진파일 -->
+    <img alt="강아지사진설명" src="강아지.jpg" width="150px" >
+      <!--  2. 상위 폴더에 사진이 있을경우 -->
+    <img alt="" src="../강아지.jpg" width="50px" >
+      <!--  3. 다른 폴더에 사진이 있을경우 -->
+    <img alt="" src="../img/강아지.jpg" width=50% >
+      <!--  4. 절대 경로 : 모든 경로 [프로젝트내 파일경로] : 로컬에서 사진 호출 -->
+    <img alt="" src="">
+
+
+
+</body> <!-- body e -->
+</html> <!--  html end  -->

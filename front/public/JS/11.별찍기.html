@@ -189,18 +189,28 @@
         }
         console.log(output)
         */
+        let output = ''
         let 문제9 = prompt('9.줄수:')
-        output +=' '
-        for (let i = 1 ; i<=문제9 ; b++){
-            output+=' '	
+        for(let i = 0; i < 문제9; i++){
+        	for (let b = 1; b < 문제9 - i; b++){
+        		output += ' '
+        	}
+        	for (let s = 0 ; s < i*2+1; s++){
+        		output +='*'
+        	}
+        	output +='\n'
         }
-          for(let s= 1 ; s<=i*2-1 ; s++){
-        	  output+='*'
-          }
-          output +='\n'
+        for (let i = 문제9-1; i >0; i--){
+        	for (let b = 문제9 - i; b> 0; b--){
+        		output +=' '
+        	}
+        	for (let s = i*2 - 1; s > 0; s--){
+        		output +='*'
+        	}
+        	output += '\n'
+        }
+
           console.log(output)
-          
-          
       
     </script>
     

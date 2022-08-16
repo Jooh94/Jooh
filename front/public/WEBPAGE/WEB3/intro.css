@@ -20,7 +20,7 @@ li{ list-style-type: none; }
 .banner1 
 .bn_col3{ float: left; width: 440px; }
 .bn_col4{ float: right; width: 440px; height: 480px;}
-.bn_col6{ float: right; width: 440px;}
+.bn_col6{ float: left; width: 440px;}
 .bn_col5{ float: left; width: 440px; height: 480px;}
 
 

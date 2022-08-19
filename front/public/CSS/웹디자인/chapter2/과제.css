@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+
+.container{
+	overflow: auto;
+	scroll-snap-type : y mandatory;
+	height :100vh;
+}
+
+
+section{
+	scroll-snap-align : start;
+	height: 100vh;
+	background-size: cover;
+	background-position: conter center;
+	background-repeat: no-repeat;
+	color: white;
+}
+
+
+.hero{
+	background-image: url("imges/차1.jpg");
+	text-align: flex;
+	padding-top: 10vh;
+	
+}
+
+
+.menu{
+	background-image: url("imges/차2.jpg");
+	display: flex;
+	align-items : center;
+	
+}
+
+.wrapper{
+	width : 900px;
+	margin: 0 auto;
+}
+
+.menulist tr{
+	margin-bottom: 3px;
+	line-height: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------3역-----------*/
+.contact{
+	background-image: url("imges/차3.jpg");
+	text-align: center;
+	color: white;
+
+}
+
+.contactsns{
+	display: flex;
+	justify-content: center;
+}
+
+.contactsns{
+	margin-top: 50px;
+	margin-left: 10px;
+}
+
+
+
+.title{
+	font-family: 'DynaPuff', cursive;
+	font-size: 1rem;
+	margin-bottom: 2rem;
+
+	
+}
+@media(max-width:700px){
+	.title{
+	font-size: 4rem;
+	color: white;
+	}
+}
+
+
+
+

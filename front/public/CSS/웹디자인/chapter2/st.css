@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+.contoiner{
+	overflow: auto;
+	scroll-snap-type :y mandotory;
+	height: 100vh;
+}
+
+
+
+section{
+	scroll-snap-align : start;
+	height: 100vh; 			/* vh :뷰포트 높이*/
+	background-size: cover; 	/* 화면의 비율 유지 -> 전체 화면 채우기 */
+	background-position: conter center; 
+						/* 가로    세로  정렬 */
+	background-repeat: no-repeat; /* 자동 채우기 제거 */
+	
+}
+.hero{
+	background-image: url("imges/빵.jpg"); /*배경 이미지*/
+	text-align: center;
+	padding-top: 10vh;
+	
+}
+
+.menu{
+	background-image: url("imges/빵3.jpg"); /*배경이미지*/
+	display: flex;
+	align-items: center;
+}
+
+.wrapper{
+	width : 900px;
+	margin: 0 auto;
+}
+
+.menulist tr{
+	margin-bottom: 5px;
+	line-height: 2;
+}
+/*----------------------3구역---------*/
+.contact{
+	background-image: url("imges/빵4.jpg");
+	text-align: center;
+	color: red;
+}
+
+.contactsns{
+	display: flex;
+	justify-content: center;
+	
+}
+.contactsns{
+	margin-top: 50px;
+	margin-left: 10px;
+}
+
+
+
+
+.fa-square-facebook{
+	color: red;
+}
+
+.title{
+	font-family: 'DynaPuff', cursive; /* 구글 웹폰트 */
+	font-size: 7rem;
+	margin-bottom: 2rem;
+	
+}
+/* 미디어 쿼리 : 디바이스 크기 따라 css별로 적용 */
+@media ( max-width : 700px){
+	.title{
+		font-size: 4rem;
+		color: blue;
+	
+	}
+}

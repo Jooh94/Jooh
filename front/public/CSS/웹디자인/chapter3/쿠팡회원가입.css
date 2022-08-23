@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+
+
+.main_signup{
+	width: 460px;
+	margin: 0 auto; /* 가운데 정렬*/
+	text-align: center;
+}
+.image{ height: 50px; margin-top: 40px; padding: 20px;}
+h3{
+	text-align: left;
+	font-size: 14px;
+	font-family: '돋움';
+}
+
+.signup_input{
+	margin : auto;
+	border: solid 1px #dadada;
+	padding: 10px;
+	
+	
+}
+
+#signup_id , #signup_pw{
+	margin-top : 5px;
+	height: 30px;
+	border: none;
+	width: 100%;
+	border: solid 1px #dadada;	
+
+}
+.cotainer{
+	display: flex;
+}
+#flexbox{ justify-content: space-between;}
+
+
+.signup_btn_wrap{
+	margin-top: 20px; margin-bottom: 30px;
+	height: 50px;
+	background-color: #0074e9;
+	line-height: 50px;
+
+}
+
+
+
+
+#lgibox{
+	width: 100%;
+	background-color : #0074e9;
+	border: none; color: #ffffff;
+	font-size:18px;
+	
+}
+
+
+.signup_btn_wrap2{
+	margin-top: 20px; margin-bottom: 30px;
+	height: 50px;
+	background-color: #ffffff;
+	line-height: 50px;
+}
+
+#lgibox2{
+	width: 100%;
+	background-color: #ffffff;
+	
+	font-size: 18px;
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

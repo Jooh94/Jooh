@@ -1,5 +1,45 @@
 @charset "UTF-8";
 
+
+
+/*----------------------헤더-------------*/
+
+body{
+	color:#949087; font-family: '굴림';
+	background-image: url("imaes/흰색이미지.png");
+}
+header{
+	max-width: 1000px;
+	margin:2.5rem auto 0;
+	background-image:url("images/header.svg");
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size : cover;
+	height: 170px; 
+	
+}
+
+/*----------------------------*/
+.container{
+	max-width:1000px;
+	margin: 0 auto;
+	background-color: #ffffff;
+	border-radius: 0 0 10px 10px;
+}
+.page_title{
+	font-size: 30px;
+	font-family: '굴림';
+	text-align: center;
+	margin-top: 50px 0px;
+	
+}
+
+.page_desc{
+	font-size: 10px; text-align: center;
+
+}
+
+
 .post_title{
 	padding-bottom: 10px; /*아래 안쪽 여백 */
 	background-image: linear-gradient(45deg ,#fff 30%, #ccc 30%, #ccc 50%,

@@ -37,6 +37,7 @@ public class Ex3_틱택토게임 {
 			if( 게임판[위치].equals("[ ]")) { 게임판[위치] = "[X]"; break;} // 알을 두 면 무한루프 종료
 		} //while2 e
 		
+		
 		//4.승리자 판단[ 과제 ]
 		
 		} // while 1 end

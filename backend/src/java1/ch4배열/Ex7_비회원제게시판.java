@@ -10,7 +10,7 @@ public class Ex7_비회원제게시판 {
       // 타입[] 배열명 = new 타입[길이]
       // 타입[][] 배열명 = new 타입[행길이][열길이]
       
-      String [ ] [ ] box = new  String [100][4];
+      String [ ] [ ] board = new  String [100][4];
       Scanner scanner = new Scanner(System.in);
       
       while( true ) {
@@ -23,27 +23,34 @@ public class Ex7_비회원제게시판 {
          int 생각안남 = scanner.nextInt(); 
          if( 생각안남 == 1 ) {
         	 System.out.println("-----------글쓰기 페이지-----------");
-        	 System.out.println("제목:");    String 생각1 = scanner.next();
-            System.out.println("내용:");      String 생각2 = scanner.next();
-            System.out.println("글쓴이");    String 생각3 = scanner.next();
-            System.out.println("비밀번호");    String 생각4 = scanner.next();
+        	 System.out.println("제목:");    String 제목 = scanner.next();
+            System.out.println("내용:");      String 내용 = scanner.next();
+            System.out.println("글쓴이");    String 작성자 = scanner.next();
+            System.out.println("비밀번호");    String 비밀번호 = scanner.next();
             
-            for(int row = 0 ; row<box.length; row++) {
-               if(box[row][0]== null) {
-                  box[row][0] = 생각1;   box[row][1] = 생각2;
-                  box[row][2] = 생각3;   box[row][3] = 생각4;
+            
+            for(int row = 0 ; row<board.length; row++) {
+               if(board[row][0]== null) {
+                  board[row][0] = 제목;   board[row][1] = 내용;
+                  board[row][2] = 작성자;   board[row][3] = 비밀번호;
+                 System.out.println("안내)글쓰기 저장 성공");
                   break;
                }
+               
             }
+            
          }
          else if(생각안남 == 2) {
-        	 System.out.println( "-----------커뮤니티");
+        	 System.out.println("목록보기");
+        int select =scanner.nextInt();
+        
         	 
         	 
-         }	 
-      }
-   }
-}
+        	 
+         } // else e	 
+      } //while e
+   } //main e
+}// class e
 
 
 

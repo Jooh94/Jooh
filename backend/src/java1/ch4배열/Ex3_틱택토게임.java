@@ -40,6 +40,8 @@ public class Ex3_틱택토게임 {
 		
 		//4.승리자 판단[ 과제 ]
 		
+		
+		
 		} // while 1 end
 		
 		

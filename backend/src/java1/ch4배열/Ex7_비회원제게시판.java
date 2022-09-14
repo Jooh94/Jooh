@@ -36,7 +36,7 @@ public class Ex7_비회원제게시판 {
                  System.out.println("안내)글쓰기 저장 성공");
                   break;
                }
-               
+               if(row==99) {System.out.println("안내)꽉찼습니다");}
             }
             
          }

@@ -2,6 +2,12 @@ package java1.자료정리;
 
 public class 자료정리 {
 
+	public static void main(String[] args) {
+		
+		
+		
+		
+	}
 }
 
 

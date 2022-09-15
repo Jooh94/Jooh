@@ -88,7 +88,7 @@ static Scanner scanner= new Scanner(System.in);
 		System.out.print("비밀번호 :"); String password = scanner.next();
 		boolean result = Contorller.con_delete(bnum,password);
 		if( result) { System.out.println("안내)게시물 삭제 성공");}
-		else {	System.out.println("안내)게시물 삭제 실패[관리자 문의]");
+		else {	System.out.println("안내)게시물 삭제 실패[관리자 문의]");}
 		
 	} // m end
 	
@@ -100,22 +100,16 @@ static Scanner scanner= new Scanner(System.in);
 		System.out.println("수정할 내용 :"); String content = scanner.next();
 		
 		boolean result =
-			
+						Contorller.con_update(bnum, password, title, content);
+		
+		if(result) {System.out.println("안내)게시물 수정 성공");}
+		else {System.out.println("안내) 게시물 수정 실패");}
+		
+		
 	}
 		
 		
+	//7.비밀번호 검증 함수		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-}
+
 }

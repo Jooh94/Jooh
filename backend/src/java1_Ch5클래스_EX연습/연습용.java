@@ -12,6 +12,9 @@ public static void main(String[] args) {
 	float 풀릇1 = 3.12345678F;
 	double 더블1 = 3.1234567891; 
 	
+	boolean[ ] 불배열 = new boolean[10];
+	불배열[0]=true;
+	
 
 	
 	

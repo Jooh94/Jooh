@@ -120,26 +120,7 @@ public class DAO {
 		return list;
 	}
 	
-	ArrayList<MemberDto> 예제5결과(){
-		String sql = "select mem_name , height , mem_number"
-				+ " from member"
-				+ " where height >= 165 and mem_number > 6";
-	
-	try {
-			ps = con.prepareStatement(sql);
-			rs = ps.executeQuery();
-			while(rs.next());{
-				MemberDto dto = new MemberDto();
-				dto.mem_name =rs.getString(1);
-				dto.height =rs.getShort(2);
-				dto.mem_number =rs.getInt(3);
-				list.add(dto); // 객체 ->리스트저장
-			}
-			return list;
-	}catch (Exception e) {System.out.println("예제5 오류"+e);}
-	return list;
-	
-	}
+
 	
 	
 	

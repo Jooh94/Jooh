@@ -8,7 +8,7 @@ public class Ex5_입출력 { //class s
 	public static void main(String[] args) { // main s
 		
 		//p.90 : print format : 출력 형식[서식=모양=폼]
-		
+		/*
 		int 변수 = 123;
 		System.out.println(변수+"원");
 		System.out.printf("%d원\n",변수);
@@ -36,7 +36,7 @@ public class Ex5_입출력 { //class s
 		String 입력문자열 = 입력객체.next();
 		System.out.println("입력받은 문자열:"+입력문자열);
 		
-		
+		*/
 		/*-----------------------------*/
 		// 입력예제)
 		//1. 입력받기 [ 준비물 : Scanner 클래스로 객체 1개필요]

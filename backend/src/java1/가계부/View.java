@@ -8,7 +8,8 @@ public class View {
 	Scanner scanner = new Scanner(System.in);
 	Controller control =new Controller(); //19-1 메소드 호출
 	//20
-	public static void main(String[] args) { View view =new View(); view.menu();}
+	public static void main(String[] args)
+	{ View view =new View(); view.menu();}
 	//8 
 	void menu() {
 		

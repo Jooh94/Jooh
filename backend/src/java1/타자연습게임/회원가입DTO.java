@@ -1,19 +1,18 @@
 package java1.타자연습게임;
 
 public class 회원가입DTO {
-
-	//1 필드
+	
 	private int mno;
+	private String mid;
 	private String pw;
 	private String mname;
 	private String mnn;
 	
-	//2.생성자
-	public 회원가입DTO() {}
-	//풀생성자
+	public 회원가입DTO(){}
 
-	public 회원가입DTO(int mno, String pw, String mname, String mnn) {
+	public 회원가입DTO(int mno, String mid, String pw, String mname, String mnn) {
 		this.mno = mno;
+		this.mid = mid;
 		this.pw = pw;
 		this.mname = mname;
 		this.mnn = mnn;
@@ -25,6 +24,14 @@ public class 회원가입DTO {
 
 	public void setMno(int mno) {
 		this.mno = mno;
+	}
+
+	public String getMid() {
+		return mid;
+	}
+
+	public void setMid(String mid) {
+		this.mid = mid;
 	}
 
 	public String getPw() {
@@ -50,6 +57,9 @@ public class 회원가입DTO {
 	public void setMnn(String mnn) {
 		this.mnn = mnn;
 	}
+	
+	
+	
 	
 	
 }

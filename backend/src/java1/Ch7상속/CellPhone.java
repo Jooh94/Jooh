@@ -1,6 +1,6 @@
 package java1.Ch7상속;
 
-public  class CellPhone {
+public   class CellPhone {
 
 	//1.필드
 	String model;

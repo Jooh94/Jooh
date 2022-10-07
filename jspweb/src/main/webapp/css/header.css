@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+/* 
+	식별자{속성= 값}
+		0. * 	*{}			:모든곳에 적용
+		1. class .클래스명{ }	: 해당클래스
+		2. id	  #id{ }	: 해당id
+		3. name	  			
+		4. 태스명
+	하위 식별자 [띄어쓰기]
+		식별자 하위식별자 {   }
+	복수 식별자선택
+		식별자 , 식별자 , 식별자 { } 
+	n번째 하위 식별자 선택
+		식별자 : nth-child( n ) : 복수 하위 식별자중 n번째 식별자 선택
+		
+*/
+
+*{ /* 기본값 제거 */
+	margin: 0px; padding:  0xp; /* 바깥여백 ,안쪽여백*/
+	 text-decoration: none; /* 밑줄제거 */
+	list-style: none; /* 글머리*/
+	color: black;
+	font-family: '맑은 고딕';
+}
+
+.webbox{
+	width: 1200px; /* 가로길이 */
+	margin: 0 auto; /* 박스 가운데 정렬*/
+}
+
+/*-----------------상단헤더---------*/
+.hd_top{
+	display: flex; /* 자식요소들이 가로배치*/
+	justify-content: space-between;
+	margin: 10px 0px 20px 0px; /* 위 오른쪽 아래쪽 왼쪽 */
+}
+.hd_sub{
+	display: flex;
+	font-size:  12px;
+}
+.hd_sub li{margin-left: 20px;}
+
+.hd_title a{font-family: "yg-jalnan"; font-size: 40px;}
+/*------------------------------------------*/
+
+
+/*-------------------하단헤더------------------*/
+.hd_menu{ display: flex; justify-content: space-between;}
+
+.serchbox input {border:none; } /* 테투리제거*/
+.serchbox span {border-bottom: solid 2px black; margin: 0px 20px 0px 150px;}
+.fa-search , .fa-shopping-cart{font-size: 20px;}
+
+
+.hd_menu li:nth-child(1) a {color: red; font-weight: bold;}
+.hd_menu li:nth-child(2) a {color: blue; font-weight: bold;}
+.hd_menu li:nth-child(10) a {color: gray; font-weight: bold;}
+.hd_menu li:nth-child(11) a {color: skyblue; font-weight: bold;}
+
+
+
+
+
+

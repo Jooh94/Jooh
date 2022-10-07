@@ -4,10 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+
 </head>
 <body>
-
+	<%@include file="../header.jsp" %>
+	<div class="webbox">
 	<h3> 회원가입 페이지 </h3>
 	<form action="/jspweb/member/signup" method="post">
 	<!-- 폼태그 :전송기능 action="URL경로 내가보내고싶은곳" method="전송방식"-->
@@ -30,6 +31,7 @@
 		<input type="submit" value="가입하기">
 
 	</form>
+	</div>
 <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script type="text/javascript" src="../js/member/signup.js"></script>
 </body>

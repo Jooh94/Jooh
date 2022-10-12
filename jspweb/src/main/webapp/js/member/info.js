@@ -10,15 +10,23 @@ $.ajax({
 	// HTTP 스트림 (바이트단위) json형식의 문자타입을 JSON 타입으로 형변환
 	let member = JSON.parse(result)
 	
-	document.querySelector("#mno").innerHTML = member.mno
-	document.querySelector("#mid").innerHTML = member.mid
-	document.querySelector("#mname").innerHTML = member.mname
-	document.querySelector("#mphone").innerHTML = member.mphone
-	document.querySelector("#memail").innerHTML = member.memail
-	document.querySelector("#maddress").innerHTML = member.maddress
-	document.querySelector("#mdate").innerHTML = member.mdate
-	document.querySelector("#mpoint").innerHTML = member.mpoint
-	getmemberlist();
+	document.querySelector("#mno").innerHTML  = member.mno
+	document.querySelector("#mid").innerHTML  = member.mid
+	document.querySelector("#mdate").innerHTML  = member.mdate
+	document.querySelector("#mpoint").innerHTML  = member.mpoint
+	
+	document.querySelector("#mname").value = member.mname
+	document.querySelector("#mphone").value = member.mphone
+	document.querySelector("#memail").value = member.memail
+		
+	document.querySelector("#sample4_postcode").value = member.maddress.split(",")[0]
+	document.querySelector("#sample4_roadAddress").value = member.maddress.split(",")[1]
+	document.querySelector("#sample4_jibunAddress").value = member.maddress.split(",")[2]
+	document.querySelector("#sample4_detailAddress").value = member.maddress.split(",")[3]
+	
+	
+	//getmemberlist();
+	
 	
 		}
 	});
@@ -93,6 +101,36 @@ function mdelete(){
 	})
 }
 
+let bottons = document.querySelectorAll('button')
+
+
+function updateaction(){
+	let mname = document.querySelector('#mname')
+	if(bottons[1].innerHTML ==='확인'){
+		$.ajax({
+			url:"http://localhost:8080/jspweb/member/update",
+			data : {"mname": mname.value},
+			success: function(re){
+				if(re==='true'){
+					alert('수정성공')
+				}else{
+					alert('수정실패')
+				}
+			}
+			
+		})
+	   bottons[1].innerHTML ='수정'
+		mname.readOnly = true;
+		//location.href = 'url';
+		location.reload();
+	}else{
+		alert('수정후 확인 버튼 클릭시 수정이 완료됩니다.')
+		mname.readOnly = false; //수정모드 제거
+		bottons[1].innerHTML ='확인'
+		
+		
+	}
+}
 
 
 

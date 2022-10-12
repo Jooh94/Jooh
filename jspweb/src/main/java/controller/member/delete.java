@@ -15,7 +15,7 @@ import model.dao.MemberDao;
 @WebServlet("/member/delete")
 public class delete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	
+			
 	public delete() {
         super();
         // TODO Auto-generated constructor stub

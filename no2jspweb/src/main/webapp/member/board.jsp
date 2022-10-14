@@ -19,19 +19,20 @@
 	<table id ="boardtable" border="1">
 	
 	</table>
+	<div>
 	<h3> 글 상세</h3>
 	<table>
 		<tr>
-			<td> 번호</td> <td id="row1"></td>
-			<td> 제목</td> <td id="row2"></td>
-			<td> 내용</td> <td id="row3"></td>
-			<td> 작성자</td> <td id="row4"></td>
-			<td> 작성일</td> <td id="row5"></td>
-			<td> 조회수</td> <td id="row6"></td>
+			<td> 번호</td> <td id="row1"></td> 
+			<td> 제목</td> <td id="row2"></td> 
+			<td> 내용</td> <td id="row3"></td> 
+			<td> 작성자</td> <td id="row4"></td> 
+			<td> 작성일</td> <td id="row5"></td> 
+			<td> 조회수</td> <td id="row6"></td> 
 		</tr>
-	
 	</table>
-		
+		<button type="button" onclick="bdelete()">삭제하기</button>
+	</div>	
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script  type="text/javascript" src="../js/member/board.js"></script>
 </body>

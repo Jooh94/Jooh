@@ -70,6 +70,23 @@ function bview(bno){
 }
 
 
+function bdelete(i){
+	let password = prompt('비밀번호 입력')
+	if( password !== boardlist[i].bpassword){alert('비밀번호 다름'); return;}
+	$.ajax({
+		url : "http://localhost:8080/no2jspweb/board/bdelete",
+		success: function(re){
+			if(re =='true'){alert("삭제 성공"); location.reload();}
+			else(alert("실패했어"))
+			
+		}
+		
+	})
+
+
+
+}
+
 
 
 

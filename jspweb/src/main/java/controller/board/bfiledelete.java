@@ -12,16 +12,16 @@ import model.dao.BoardDao;
 import model.dto.BoardDto;
 
 /**
- * Servlet implementation class bdelete
+ * Servlet implementation class bfiledelete
  */
-@WebServlet("/board/bdelete")
-public class bdelete extends HttpServlet {
+@WebServlet("/board/bfiledelete")
+public class bfiledelete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public bdelete() {
+    public bfiledelete() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,32 +30,32 @@ public class bdelete extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//1.삭제할 번호 요청
-		int bno = Integer.parseInt( request.getParameter("bno"));
 		
-		BoardDto dto =	BoardDao.getInstance().getboard(bno); // 게시물 정보호출
+		// 1. 삭제할 게시물번호 = 현재 보고 있는 게시물번호  = 세션 (OBject ->형변환)
+		int bno = (Integer)request.getSession().getAttribute("bno");
 		
-		// 2. DAO 처리 [db 내 데이터 삭제]
-		boolean result =BoardDao.getInstance().delete(bno);
-		if( result) {
-			
+		// 삭제할 게시물 정보 호출
+		BoardDto dto = BoardDao.getInstance().getboard(bno);
+		
+		//2. DAO 처리
+		boolean result = BoardDao.getInstance().bfiledelete(bno);
+		//3. 실제 파일 삭제처리
+		if(result) {
 			String deletepath = request.getSession().getServletContext().getRealPath("/upload/"+dto.getBfile());
-		 
 			File file = new File(deletepath);
-			if(file.exists()) file.delete(); // 해당 경로에 존재하는 파일 삭제
-			// File 클래스
-					//자바 외부에 존재하는 파일 조작/제어 메소드 제공하는 클래스
-					//1.객체명.length(): 해당 파일의 바이트 길이
-					//2.객체명.length(): 해당 파일의 삭제
-					//3. 객체명.exists() : 해당 파일이 존재하면 true/false
-					
+			if(file.exists()) file.delete();
 		}
-		//결과 응답
+		
+		
+		//4. 결과 반환
 		response.getWriter().print(result);
+	
 	
 	}
 
-
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);

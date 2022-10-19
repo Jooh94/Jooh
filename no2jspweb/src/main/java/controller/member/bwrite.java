@@ -28,7 +28,7 @@ String bwrite =	request.getParameter("bwrite");
 String bpassword =	request.getParameter("bpassword");
 
 MemberDao dao = new MemberDao(); // 선언
-boolean result =	dao.bwrite(bitle, bcontent, bwrite, bpassword);
+boolean result =dao.bwrite(bitle, bcontent, bwrite, bpassword);
 //3.결과제어 이거 반환 스크립트로 넘겨주기
 response.getWriter().print(result);
 

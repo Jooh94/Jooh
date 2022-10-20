@@ -24,9 +24,10 @@ function list(){
 
 }
 function viewload( bno ){
+	alert( bno + " click ")
 	$.ajax({
 		url : "http://localhost:8282/jsptest2/view" , 
-		data : { " bno " : bno , " type " : " load " } , 
+		data : {  "bno" : bno , "type" : "load" } ,  // 문자처리 할때 띄어쓰기 하지마세요 [ 띄어쓰기도 문자에 속합니다..]
 		success : function(re){ location.href = "view.html" }
 	})
 }

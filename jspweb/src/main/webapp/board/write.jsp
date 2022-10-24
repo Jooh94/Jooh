@@ -11,7 +11,7 @@
 <body>
 
 			<%@include file="../header.jsp" %>
-			<% if(loginid == null)response.sendRedirect("http://localhost:8080/jspweb/member/login.jsp"); %>
+			<% if(loginid == null)response.sendRedirect("/jspweb/member/login.jsp"); %>
 			
 			<div class="webbox">
 				

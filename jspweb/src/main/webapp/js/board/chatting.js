@@ -4,34 +4,36 @@ let mid = document.querySelector('.mid').value
 let clientsocket = null; 
 // 3. 접속 제어 
 if( mid != 'null'){
-			// 웹소켓에 서버소켓으로 연결[매핑]
-			clientsocket 
-			= new WebSocket('ws://localhost:8080/jspweb/chatting/'+mid);
-			// 아래에서 구현 메소드를 객체에 대입
-			clientsocket.onopen = function(e){ onopen(e) }
-			clientsocket.onclose = function(e){ onclose(e) }
-			clientsocket.onmessage = function(e){ onmessage(e) }
-			clientsocket.onerror = function(e){ onerror(e) }
+	// 웹소켓에 서버소켓으로 연결[매핑]
+	clientsocket 
+	= new WebSocket('ws://localhost:8080/jspweb/chatting/'+mid);
+	// 아래에서 구현 메소드를 객체에 대입
+	clientsocket.onopen = function(e){ onopen(e) }
+	clientsocket.onclose = function(e){ onclose(e) }
+	clientsocket.onmessage = function(e){ onmessage(e) }
+	clientsocket.onerror = function(e){ onerror(e) }
 }else{ alert('로그인하고 오세요~'); location.href='../member/login.jsp'; }
-function onopen(e){ 	alert( e ) }
-function onclose(e){  	alert( e )}
-function send(){ 
-	let msg = { //전송할 데이터 객체
-		type : "msg", // 일반메시지
-		content : document.querySelector('.msgbox').value , //작성 내용 
-		mid : mid , // 보낸사람
-		date : new Date().toLocaleTimeString(), //날짜 
-		img : '돈까스으.jpg' //사진
+function onopen(e){ 	}
+function onclose(e){  	}
+
+function send(){
+	let msg = { // 전송할 데이터 객체
+		type : "msg" ,  // 일반메시지
+		content : document.querySelector('.msgbox').value , // 작성내용
+		mid : mid ,  // 보낸 사람 
+		date : new Date().toLocaleTimeString(), // 날짜 
+		img : '돈까스으.jpg' // 사진
 	}
 	clientsocket.send( JSON.stringify(msg) )
 	document.querySelector('.msgbox').value = ''
 }
-function emosend(i){ //이모티콘 전송
-	let msg ={
-		type : "emo", // 이모티콘
-		content : i , //이미지 번호
-		mid : mid ,//보낸사람
-		date : new Date().toLocaleDateString(), // 날짜
+
+function emosend( i ){	// 이모티콘 전송
+	let msg = {
+		type : "emo" ,  // 이모티콘
+		content : i , // 이미지번호
+		mid : mid , // 보낸 사람
+		date : new Date().toLocaleTimeString() , // 날짜 
 		img : '돈까스으.jpg'
 	}
 	clientsocket.send( JSON.stringify(msg) )
@@ -96,14 +98,14 @@ function onmessage(e){
 			'</div>';
 			document.querySelector('.contentbox').innerHTML = html
 		}
-		
-	}else if(msg.type == 'alarm'){
-		///////////////////////3.알람메시지
+		////////////////////////////////////////////////////////////////////////////////////
+	}else if( msg.type == 'alarm' ){
+		///////////////////////////////////////3. 알람 메시지 코드 /////////////////////////////////////////////
 		let html = document.querySelector('.contentbox').innerHTML;
-		html += '<div class="alarm">'+
-					'<span>'+msg.content+'</span>'+
-					'</div>';
-			document.querySelector('.contentbox').innerHTML = '';
+		html +=	'<div class="alarm">'+
+					'<span> '+msg.content+' </span>'+
+				'</div>';
+		document.querySelector('.contentbox').innerHTML = html		
 	}
 	
 	/////////////// 스크롤 하단으로 내리기 ////////////////////////
@@ -117,25 +119,18 @@ function onmessage(e){
 	
 	
  }
- 
 function onerror(e){ 	alert(e) }
-
-
-emoview()
-// 이모티콘 호출
-function emoview(){
-	let html = '';
-	for( let i = 1; i<=43 ; i++){
-		html =+ '<li><img src="/jspweb/img/imoji/emo'+i+'.gif" width="70px" onclick="emosend('+i+')"></li>'
-	}
-	document.querySelector('.dropdown-menu').innerHTML = html
-	
-}
-
 
 
 
 // JSON ---> 문자열 변환 	JSON.stringify( )
 // 문자열 ---> JSON 변환  	JSON.parse( )
 
-
+emoview() // 이모티콘 호출 
+function emoview(){ // 이모티콘 호출 함수 
+	let html ='';
+	for( let i = 1 ; i<=43 ; i++ ){
+		html +=  '<img src="/jspweb/img/imoji/emo'+i+'.gif" width="70px" onclick="emosend('+i+')">'
+	}
+	document.querySelector('.dropdown-menu').innerHTML = html
+}

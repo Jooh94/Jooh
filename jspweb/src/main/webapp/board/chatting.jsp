@@ -41,7 +41,7 @@
 							</button>
 							<ul style="width:400px; height: 200px; "  class="dropdown-menu">
 								<!--  이모티콘 표시 구역 -->
-								<li><img src="/jspweb/img/imoji/emo1.gif" width="70px" onclick="emosend()"</li>
+
 							</ul>
 						</div>
 						<div class="col-sm-3 offset-7">
@@ -56,9 +56,6 @@
 	</div> <!-- 컨테이너 end -->
 	
 
-	
-		
-	
 	
 	
 	<script type="text/javascript" src="../js/board/chatting.js"></script>

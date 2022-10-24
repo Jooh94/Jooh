@@ -60,7 +60,7 @@
 			<li><a href="#"> 악세사리 </a></li>
 			<li><a href="#"> BEST </a></li>
 			<li><a href="#"> 트레이닝 </a></li>
-			<li><a href="#"> 50% 할인 </a></li>
+			<li><a href="/jspweb/board/api.jsp"> 공공데이터 </a></li>
 			<li><a href="/jspweb/board/chatting.jsp"> 채팅방 </a></li>
 			<li class="serchbox">
 				<span>

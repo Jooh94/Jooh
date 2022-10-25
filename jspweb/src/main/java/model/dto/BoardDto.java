@@ -10,7 +10,6 @@ public class BoardDto {
 	private int bview;
 	private int cno;
 	private int mno;
-	
 	private String mid ;
 	
 public BoardDto() {}

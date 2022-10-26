@@ -10,6 +10,10 @@ public class Dao {
 	PreparedStatement ps;  // sql조작인터페이스//sql조작 인터페이스
 	ResultSet rs; // 결과(쿼리)조작			// 쿼리조작 인터페이스
 	
+	// insert , update , delete ---> rs x 
+	// select -> rs o
+	
+	
 	public Dao() {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");

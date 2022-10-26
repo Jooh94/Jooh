@@ -25,7 +25,7 @@
 				</div>
 			상품대표이미지 : <input type="file" id="pimg" name="pimg">  <br>
 			<button type="reset">취소</button>
-			<button onclick="regist()">등록</button>
+			<button type="button" onclick="regist()">등록</button>
 			</form>
 		</div>	
 		<div> <!-- form에 등록된 첨부파일[이미지만 가능] 미리보기 -->

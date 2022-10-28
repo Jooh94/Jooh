@@ -20,6 +20,5 @@ mainbox.addEventListener('click',function(){
 
 ////본문 페이지 전환 이벤트 ///
 function pagechage(page){
-	
 	$('#mainbox').load(page)
 }

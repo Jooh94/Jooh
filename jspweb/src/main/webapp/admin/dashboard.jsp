@@ -27,6 +27,7 @@
 			<li class="side_item"><a onclick="pagechage('list.jsp')">제품 목록</a>
 			<li class="side_item"><a href="#">재고 관리</a>
 			<li class="side_item"><a href="#">주문 관리</a>
+
 			<li class="side_item"><a href="#">매출 관리</a>
 			<li class="side_item"><a href="#">회원 목록</a>
 			<li class="side_item"><a href="#">배송 관리</a>

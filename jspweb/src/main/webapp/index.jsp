@@ -47,39 +47,10 @@
 			
 			<div class="itemlist"><!-- 일정 구역 -->
 				
-				
-				
-				<div class="item"> <!-- 1개의 제품[아이템] -->
-					<a href=""> <!-- 대표이미지 -->
-						<img src="/jspweb/img/p1.jpg"> 
-					</a>
-					
-					<div class= "item_info"> <!-- 제품 정보 -->
-						<div class="item-title"> <!-- 제품명 -->
-						따수한 패딩
-						</div>
-						
-						<div class="item_size">[FREE]</div>
-						
-						<div class="item_price">200,000원</div>
-						<div>
-							<span class="item_sale"> 20,00원</span>
-							<span class="item_discount"> 90% </span>
-						</div>
-						<div class="item_review">찜수 54 리뷰수 412</div> <!-- 리뷰 카운트 -->
-					</div>
-					<div><!-- 배지 구역 -->
-						<span class="badge rounded-pill text-bg-warning">주문폭주</span>
-						<span class="badge rounded-pill text-bg-danger">1+1</span>
-					</div>
-				</div>
-						
-				
 			</div>
-		
 		</div>
 		
-		<script src="../js/index/index.js" type="text/javascript"></script>
+		<script src="/jspweb/js/index.js" type="text/javascript"></script>
 				
 </body>
 </html>

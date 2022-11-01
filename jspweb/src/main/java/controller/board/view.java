@@ -59,7 +59,7 @@ public class view extends HttpServlet {
 			}
 			
 			//4 응답
-			response.setCharacterEncoding("utf-8");
+			response.setCharacterEncoding("UTF-8");
 			response.getWriter().print(object);
 	}
 
